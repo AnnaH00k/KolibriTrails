@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { getImagePath } from "../../utils/imagePath";
 
 interface ImageCarouselProps {
   images: string[];
@@ -43,7 +44,7 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             }`}
           >
             <Image
-              src={image}
+              src={getImagePath(image)}
               alt={`${alt} - Bild ${index + 1}`}
               fill
               className="object-contain"
@@ -123,4 +124,3 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
     </div>
   );
 }
-

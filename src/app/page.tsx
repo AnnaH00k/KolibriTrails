@@ -2,6 +2,7 @@ import Image from "next/image";
 import ImageCarousel from "./components/ImageCarousel";
 import routesData from "../data/routes.json";
 import type { Route } from "../types/routes";
+import { getImagePath } from "../utils/imagePath";
 
 const routes: Route[] = routesData;
 
@@ -11,7 +12,7 @@ export default function Home() {
       {/* Hero mit Logo */}
       <section className="mx-auto flex max-w-6xl flex-col items-center justify-center px-6 py-10">
         <Image
-          src="/colibriLogo.png"
+          src={getImagePath("/colibriLogo.png")}
           alt="Colibri Trails Logo"
           className="h-[40vh] w-auto rounded-full object-cover"
           width={600}
