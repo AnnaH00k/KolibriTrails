@@ -6,6 +6,6 @@ export interface Route {
   elevation: string;
   duration: string;
   location?: string;
-  komootLink: string;
+  komootLink?: string;
   photos: string[];
 }

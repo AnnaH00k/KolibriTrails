@@ -169,11 +169,10 @@
   },
   {
     "id": 13,
-    "title": "Dezember: ",
-    "distance": "10 km",
-    "elevation": "450 m",
-    "duration": "3 Std",
-    "komootLink": "#",
+    "title": "Deine Wunsch Route ",
+    "distance": "Wunschstrecke",
+    "elevation": "so viel wir schaffen",
+    "duration": "1 ganzer tag",
     "photos": [
       "/colibriLogo.png"
     ]
