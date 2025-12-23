@@ -87,61 +87,68 @@
   },
   {
     "id": 7,
-    "title": "Juni: ",
-    "distance": "10 km",
-    "elevation": "450 m",
+    "title": "Juni: Wildromantischer Eifgenbach",
+    "distance": "10.3 km",
+    "elevation": "260 m",
     "duration": "3 Std",
-    "komootLink": "#",
+    "komootLink": "https://www.komoot.com/de-DE/smarttour/18584222?ref=itd&query=d01AwuM6gBs_XA=FufcBW1JinePOqIqo_TbHIJktzgOnBoT6DRPQWC9r5cZPXZV3aCv6kDekHwkNkTZGyF2etBV-gEzGPs0mChOqUmRyoA=",
     "photos": [
-      "/colibriLogo.png"
+      "/Juni/Juni0.webp",
+      "/Juni/Juni1.webp"
     ]
   },
   {
     "id": 8,
-    "title": "Juli: ",
-    "distance": "10 km",
-    "elevation": "450 m",
-    "duration": "3 Std",
-    "komootLink": "#",
+    "title": "Juli: Drachenfelsplateau",
+    "distance": "11,6 km",
+    "elevation": "290 m",
+    "duration": "3.5 Std",
+    "komootLink": "https://www.komoot.com/de-DE/smarttour/1432761429?ref=itd&query=d01AwVHiABunAI=FwdcENR3GtNYp777yuLmA-bMC5f64UYbuA60ks_j4NwJFOL-A7TTvjYC_03xsBQxAviFH8AJISL-zyjkCRTpAKEB2IY-gFhGR4BiS3PJHUaFGaA=",
     "photos": [
-      "/colibriLogo.png"
+      "/Juli/juli0.webp",
+      "/Juli/juli1.webp",
+      "/Juli/juli2.webp",
+      "/Juli/juli3.webp"
     ]
   },
   {
     "id": 9,
-    "title": "August: ",
-    "distance": "10 km",
-    "elevation": "450 m",
-    "duration": "3 Std",
-    "komootLink": "#",
+    "title": "August: Südaufstieg des Rodderbergs ",
+    "distance": "7,06 km",
+    "elevation": "180 m",
+    "duration": "2 Std",
+    "komootLink": "https://www.komoot.com/de-DE/smarttour/54550?ref=itd&query=d01AwSTSwBt-C4=FwfsE10aaCvAxVcgBXdRfz4SNQyPD6gF7AsoKwBAQCxCNoByrgIT5O6iAvtukS9eOYC5pF6_Gz94hNkmlBlZrYwuktRQ",
     "photos": [
-      "/colibriLogo.png"
+      "/August/August1.webp",
+      "/August/August0.webp",
+      "/August/August2.webp",
+      "/August/August3.webp"
     ]
   },
   {
     "id": 10,
-    "title": "September: ",
-    "distance": "10 km",
-    "elevation": "450 m",
-    "duration": "3 Std",
-    "komootLink": "#",
+    "title": "September: Wasserweg - Naturpark Bergisches Land ",
+    "distance": "4,44 km",
+    "elevation": "40 m",
+    "duration": "1.25 Std",
+    "komootLink": "https://www.komoot.com/de-DE/smarttour/e1999503139?ref=itd&query=d01AwyQnwBv_o0=FudsE28MIi8bQq8Af6-Ll6B7Qtat6YfNqdXiCCiAD_X0qFU_zQA=",
     "photos": [
-      "/colibriLogo.png"
+      "/September/September0.webp",
+      "/September/September1.webp",
+      "/September/September2.webp"
     ]
   },
   {
     "id": 11,
-    "title": "Oktober: ",
-    "distance": "10 km",
-    "elevation": "450 m",
-    "duration": "3 Std",
-    "komootLink": "#",
+    "title": "Oktober: Wasserfall Dreimühlen – Felswand an der Nohner Mühle Runde von Ahütte ",
+    "distance": "6.33 km",
+    "elevation": "90 m",
+    "duration": "1.75 Std",
+    "komootLink": "https://www.komoot.com/de-DE/smarttour/18019705?ref=itd&query=d01AwAYzgBnUCc=FvfcERueuu6Tx4lpveIILX-QEh-S-73pHAws-QAAAAEX7BFzXzv1fiXag1YOXQf_A3YMYh0AAAABOSqlANQAmjMXeIrCCkJDShQeoA==",
     "photos": [
-      "/November/November1.webp",
-      "/November/November2.webp",
-      "/November/November3.webp",
-      "/November/November4.webp",
-      "/November/November5.webp"
+      "/Oktober/oktober0.webp",
+      "/Oktober/oktober1.webp",
+      "/Oktober/oktober2.webp"
     ]
   },
   {
