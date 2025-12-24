@@ -122,17 +122,6 @@ export default function Home() {
                     )}
                   </div>
                 </article>
-
-                {/* Punkt auf der Straße */}
-                <div
-                  className={`absolute top-16 z-20 flex h-8 w-8 items-center justify-center rounded-full border-4 border-[#FFFAF4] bg-[#E8A799] shadow-md ${
-                    isLeft ? "right-[calc(50%-1rem)]" : "left-[calc(50%-1rem)]"
-                  }`}
-                >
-                  <span className="text-xs font-bold text-white">
-                    {route.id}
-                  </span>
-                </div>
               </li>
             );
           })}

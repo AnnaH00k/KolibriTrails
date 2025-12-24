@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { getImagePath } from "../../utils/imagePath";
 
 interface ImageCarouselProps {
@@ -11,6 +11,12 @@ interface ImageCarouselProps {
 
 export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  // Minimum swipe distance (in pixels)
+  const minSwipeDistance = 50;
 
   if (!images || images.length === 0) {
     return (
@@ -32,8 +38,39 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
     setCurrentIndex(index);
   };
 
+  // Touch handlers for swipe gestures
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      goToNext();
+    }
+    if (isRightSwipe) {
+      goToPrevious();
+    }
+  };
+
   return (
-    <div className="relative h-48 w-full overflow-hidden bg-black group">
+    <div
+      ref={carouselRef}
+      className="relative h-48 w-full overflow-hidden bg-black group touch-pan-y"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       {/* Bilder */}
       <div className="relative h-full w-full">
         {images.map((image, index) => (
@@ -57,14 +94,14 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
       {/* Navigation Buttons - nur sichtbar wenn mehr als 1 Bild */}
       {images.length > 1 && (
         <>
-          {/* Vorheriger Button */}
+          {/* Vorheriger Button - sichtbar auf Mobile, hover auf Desktop */}
           <button
             onClick={goToPrevious}
-            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-1.5 text-white opacity-0 transition-opacity group-hover:opacity-100 hover:bg-black/70"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-black/50 p-2 text-white opacity-100 md:opacity-0 transition-opacity group-hover:md:opacity-100 hover:bg-black/70 active:bg-black/80 touch-manipulation"
             aria-label="Vorheriges Bild"
           >
             <svg
-              className="h-4 w-4"
+              className="h-5 w-5 md:h-4 md:w-4"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
@@ -78,14 +115,14 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             </svg>
           </button>
 
-          {/* Nächster Button */}
+          {/* Nächster Button - sichtbar auf Mobile, hover auf Desktop */}
           <button
             onClick={goToNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-1.5 text-white opacity-0 transition-opacity group-hover:opacity-100 hover:bg-black/70"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-black/50 p-2 text-white opacity-100 md:opacity-0 transition-opacity group-hover:md:opacity-100 hover:bg-black/70 active:bg-black/80 touch-manipulation"
             aria-label="Nächstes Bild"
           >
             <svg
-              className="h-4 w-4"
+              className="h-5 w-5 md:h-4 md:w-4"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
